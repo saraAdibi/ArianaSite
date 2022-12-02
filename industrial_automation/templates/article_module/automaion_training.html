@@ -1,0 +1,67 @@
+{% extends 'shared/_layout.html' %}
+{% load poll_extras %}
+{% load thumbnail %}
+{% load render_partial %}
+
+{% block title %}
+    آموزش ربات
+{% endblock %}
+
+
+{% block content %}
+    <!-- Breadcrumb -->
+    <div class="breadcrumbs overlay" style="background-image:url('/static/img/team/download (4).jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bread-inner">
+                        <!-- Bread Menu -->
+                        <div class="bread-menu">
+                            <ul>
+                                <li><a href="/">خانه</a></li>
+                                <li><a href="/automation-training/">آموزش اتوماسیون صنعتی</a></li>
+                            </ul>
+                        </div>
+                        <!-- Bread Title -->
+                        <div class="bread-title"><h2>دوره های اتوماسیون صنعتی آریانا</h2></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / End Breadcrumb -->
+
+    <!-- Portfolio Details -->
+    <section class="pf-details  section-space">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-12">
+                    <!-- Portfolio Image -->
+
+                    <div class="project-head">
+
+                        {% include 'article_module/acordeon.html' %}
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <!-- Project Info -->
+                    <div class="portfolio-meta">
+                        <ul>
+                            <li><i class="fa fa-user"></i><span>برگزار کننده دوره ها:</span> <b>شرکت اتوماسیون صنعتی
+                                آریانا</b></li>
+                            {#								<li><i class="fa fa-tag"></i><span>گروه پروژه:</span> <b>طراحی وب ، توسعه ها</b></li>#}
+                            <li><i class="fa fa-calendar"></i><span>تاریخ برگزاری کلاس ها:</span> <b>برای شرکت در دوره
+                                های آریانا با ما تماس بگیرید. تلفن: 44181980-021</b></li>
+                            <li><i class="fa fa-map-marker"></i><span>آدرس:</span> <b>تهران، کیلومتر 14 جاده مخصوص، بعد
+                                از پل ایرانخودرو، شهرک 22 بهمن، گلستان 3، پلاک 23</b></li>
+                            <li><a href="/contact-us/" target="_blank" class="bizwheel-btn theme-2">تماس با ما</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--/ End Portfolio Details -->
+
+{% endblock %}

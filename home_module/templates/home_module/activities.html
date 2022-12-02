@@ -1,0 +1,69 @@
+<!-- Features Area -->
+<section class="features-area section-bg">
+    <div class="container">
+        <div class="row">
+            {% for slider in sliders %}
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Feature -->
+                    <div class="single-feature">
+                        <div class="icon-head">
+                            {#                            <i class="fa fa-podcast"></i>#}
+                            <img src="{{ slider.image.url }}" alt="Video">
+
+                        </div>
+                        <h4><a href="#">{{ slider.title }}</a></h4>
+                        <p>{{ slider.description }}</p>
+                        {% if slider.url is not None %}
+                            <div class="button">
+                                <a href="{{ slider.url }}" class="bizwheel-btn"><i
+                                        class="fa fa-arrow-circle-o-left"></i>بیشتر
+                                    بدانید</a>
+                            </div>
+                        {% endif %}
+                    </div>
+                    <!--/ End Single Feature -->
+                </div>
+            {% endfor %}
+            <!--            <div class="col-lg-3 col-md-6 col-12">-->
+            <!--                &lt;!&ndash; Single Feature &ndash;&gt;-->
+            <!--                <div class="single-feature">-->
+            <!--                    <div class="icon-head"><i class="fa fa-podcast"></i></div>-->
+            <!--                    <h4><a href="service-single.html">خدمات با کیفیت</a></h4>-->
+            <!--                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>-->
+            <!--                    <div class="button">-->
+            <!--                        <a href="service-single.html" class="bizwheel-btn"><i class="fa fa-arrow-circle-o-left"></i>بیشتر-->
+            <!--                            بدانید</a>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                &lt;!&ndash;/ End Single Feature &ndash;&gt;-->
+            <!--            </div>-->
+            <!--            <div class="col-lg-3 col-md-6 col-12">-->
+            <!--                &lt;!&ndash; Single Feature &ndash;&gt;-->
+            <!--                <div class="single-feature active">-->
+            <!--                    <div class="icon-head"><i class="fa fa-podcast"></i></div>-->
+            <!--                    <h4><a href="service-single.html">تحویل به موقع</a></h4>-->
+            <!--                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>-->
+            <!--                    <div class="button">-->
+            <!--                        <a href="service-single.html" class="bizwheel-btn"><i class="fa fa-arrow-circle-o-left"></i>بیشتر-->
+            <!--                            بدانید</a>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                &lt;!&ndash;/ End Single Feature &ndash;&gt;-->
+            <!--            </div>-->
+            <!--            <div class="col-lg-3 col-md-6 col-12">-->
+            <!--                &lt;!&ndash; Single Feature &ndash;&gt;-->
+            <!--                <div class="single-feature">-->
+            <!--                    <div class="icon-head"><i class="fa fa-podcast"></i></div>-->
+            <!--                    <h4><a href="service-single.html">پشتیبانی 24 ساعت</a></h4>-->
+            <!--                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>-->
+            <!--                    <div class="button">-->
+            <!--                        <a href="service-single.html" class="bizwheel-btn"><i class="fa fa-arrow-circle-o-left"></i>بیشتر-->
+            <!--                            بدانید</a>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                &lt;!&ndash;/ End Single Feature &ndash;&gt;-->
+            <!--            </div>-->
+        </div>
+    </div>
+</section>
+<!--/ End Features Area -->

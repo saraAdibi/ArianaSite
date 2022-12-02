@@ -1,0 +1,266 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: right;
+            outline: none;
+            font-size: 18px;
+            transition: 0.4s;
+        }
+
+
+        .accordion:after {
+            content: '';
+            color: #777;
+            font-weight: bold;
+            float: left;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: #eee;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+    </style>
+</head>
+<div class="recommended_items"><!--NewProduct_items-->
+    <br>
+    <h2 class="title text-center"> به وب سایت شرکت اتوماسیون صنعتی آریانا خوش آمدید !</h2>
+    <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+        {#        <div class="carousel-inner">#}
+        {#            <div class="item active">#}
+        {#                <div class="col-sm-3">#}
+        {#                    <div class="product-image-wrapper">#}
+        {#                        <div class="single-products">#}
+        {#                            <div class="productinfo text-center">#}
+        {#                                <img src="/static/images/home/Gallery.jpg" alt=""/>#}
+        {#                                <h2>1.250.000 R</h2>#}
+        {#                                <p>توضیحات کوتاه محصول</p>#}
+        {#                                <a href="#" class="btn btn-default add-to-cart"><i#}
+        {#                                        class="fa fa-shopping-cart"></i>افزودن به سبـد خرید</a>#}
+        {#                            </div>#}
+        {##}
+        {#                        </div>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#                <div class="col-sm-3">#}
+        {#                    <div class="product-image-wrapper">#}
+        {#                        <div class="single-products">#}
+        {#                            <div class="productinfo text-center">#}
+        {#                                <img src="/static/images/home/Gallery.jpg" alt=""/>#}
+        {#                                <h2>1.250.000 R</h2>#}
+        {#                                <p>توضیحات کوتاه محصول</p>#}
+        {#                                <a href="#" class="btn btn-default add-to-cart"><i#}
+        {#                                        class="fa fa-shopping-cart"></i>افزودن به سبـد خرید</a>#}
+        {#                            </div>#}
+        {##}
+        {#                        </div>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#                <div class="col-sm-3">#}
+        {#                    <div class="product-image-wrapper">#}
+        {#                        <div class="single-products">#}
+        {#                            <div class="productinfo text-center">#}
+        {#                                <img src="/static/images/home/Gallery.jpg" alt=""/>#}
+        {#                                <h2>1.250.000 R</h2>#}
+        {#                                <p>توضیحات کوتاه محصول</p>#}
+        {#                                <a href="#" class="btn btn-default add-to-cart"><i#}
+        {#                                        class="fa fa-shopping-cart"></i>افزودن به سبـد خرید</a>#}
+        {#                            </div>#}
+        {##}
+        {#                        </div>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#                <div class="col-sm-3">#}
+        {#                    <div class="product-image-wrapper">#}
+        {#                        <div class="single-products">#}
+        {#                            <div class="productinfo text-center">#}
+        {#                                <img src="/static/images/home/Gallery.jpg" alt=""/>#}
+        {#                                <h2>1.250.000 R</h2>#}
+        {#                                <p>توضیحات کوتاه محصول</p>#}
+        {#                                <a href="#" class="btn btn-default add-to-cart"><i#}
+        {#                                        class="fa fa-shopping-cart"></i>افزودن به سبـد خرید</a>#}
+        {#                            </div>#}
+        {##}
+        {#                        </div>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#            </div>#}
+        {#            <div class="item">#}
+        {#                <div class="col-sm-3">#}
+        {#                    <div class="product-image-wrapper">#}
+        {#                        <div class="single-products">#}
+        {#                            <div class="productinfo text-center">#}
+        {#                                <img src="/static/images/home/Gallery.jpg" alt=""/>#}
+        {#                                <h2>1.250.000 R</h2>#}
+        {#                                <p>توضیحات کوتاه محصول</p>#}
+        {#                                <a href="#" class="btn btn-default add-to-cart"><i#}
+        {#                                        class="fa fa-shopping-cart"></i>افزودن به سبـد خرید</a>#}
+        {#                            </div>#}
+        {##}
+        {#                        </div>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#                <div class="col-sm-3">#}
+        {#                    <div class="product-image-wrapper">#}
+        {#                        <div class="single-products">#}
+        {#                            <div class="productinfo text-center">#}
+        {#                                <img src="/static/images/home/Gallery.jpg" alt=""/>#}
+        {#                                <h2>1.250.000 R</h2>#}
+        {#                                <p>توضیحات کوتاه محصول</p>#}
+        {#                                <a href="#" class="btn btn-default add-to-cart"><i#}
+        {#                                        class="fa fa-shopping-cart"></i>افزودن به سبـد خرید</a>#}
+        {#                            </div>#}
+        {##}
+        {#                        </div>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#                <div class="col-sm-3">#}
+        {#                    <div class="product-image-wrapper">#}
+        {#                        <div class="single-products">#}
+        {#                            <div class="productinfo text-center">#}
+        {#                                <img src="/static/images/home/Gallery.jpg" alt=""/>#}
+        {#                                <h2>1.250.000 R</h2>#}
+        {#                                <p>توضیحات کوتاه محصول</p>#}
+        {#                                <a href="#" class="btn btn-default add-to-cart"><i#}
+        {#                                        class="fa fa-shopping-cart"></i>افزودن به سبـد خرید</a>#}
+        {#                            </div>#}
+        {##}
+        {#                        </div>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#                <div class="col-sm-3">#}
+        {#                    <div class="product-image-wrapper">#}
+        {#                        <div class="single-products">#}
+        {#                            <div class="productinfo text-center">#}
+        {#                                <img src="/static/images/home/Gallery.jpg" alt=""/>#}
+        {#                                <h2>1.250.000 R</h2>#}
+        {#                                <p>توضیحات کوتاه محصول</p>#}
+        {#                                <a href="#" class="btn btn-default add-to-cart"><i#}
+        {#                                        class="fa fa-shopping-cart"></i>افزودن به سبـد خرید</a>#}
+        {#                            </div>#}
+        {##}
+        {#                        </div>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#            </div>#}
+        {#        </div>#}
+        {#        <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">#}
+        {#            <i class="fa fa-angle-left"></i>#}
+        {#        </a>#}
+        {#        <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">#}
+        {#            <i class="fa fa-angle-right"></i>#}
+        {#        </a>#}
+        <div class="col-sm-6">
+            <div class="blog-post-area">
+                <img src="/static/images/home/industrial_automation.jpg" alt="" style="width:550px; "/>
+                <br>
+                <br>
+                <h4 style="text-align: justify">
+                    شركت اتوماسيون صنعتي آريانا با هدف ارايه خدمات جهت ارتقاء سطح تكنولوژي و بمنظور ارايه خدمات پيشرفته
+                    صنعتي توسط تعدادي از دست اندر كاران صنعت در سال 1384 بصورت دانش بنيان و با تكيه بر دانش كارشناسان
+                    آغاز به کار و از همان ابتدا فعاليت خود را بعنوان مشاور سالن هاي رنگ شركت هاي خودرو سازي آغاز و در
+                    ادامه با گسترش توان فني و علمي شركت در سال 1386 اين شركت به كارگاه ساخت و تعمير قطعات الكترونيكي و
+                    مكانيكي مجهز گرديد و چند نمونه از قطعات خاص صنايع را به توليد رساند و در زمينه تولید نرم افزارها نيز
+                    توانست چند نرم افزار نگهداري و تعميرات ، نرم افزار هاي انبار داري و سيستم هاي اتوماسيون و مانيتورينگ
+                    را بصورت كاملا" داخلي تهيه و در اختيار صنايع قرار دهد . و همچنین این شرکت در زمينه آموزش نيز توانست
+                    با عقد قرار داده هاي آموزشي به توسعه علمي صنايع در حد توان خود پرداخته و چندين دوره آموزشي خاص در
+                    صنايع برگزار نمايد . لازم به ذکر است خدمات ارایه شده در این شرکت قابل رقابت با شركت هاي بنام خارجي
+                    است .
+
+
+                </h4>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6">
+            <div class="left-sidebar">
+                <h3 style="color: #f0ad4e">معرفی شرکت :</h3>
+                <h4 style="text-align: justify">
+                    شركت اتوماسيون صنعتي آريانا با هدف ارايه خدمات پيشرفته در زمینه ربات های صنعتی در سال 1384
+                    بصورت دانش بنيان آغاز به کار نمود که با توسعه فعالیت ها خود در حال حاضر خدمات این شرکت به چهار بخش
+                    اصلی زیر تقسیم می گردد:</h4>
+                <h4>
+                    1. نرم افزار و اتوماسیون صنعتی 2. تعمیرات 3. آموزش 4. تولید قطعات خاص
+                    رباتها
+                </h4>
+                <br>
+                <br>
+                <br>
+
+            </div>
+
+
+        </div>
+        <div style="text-align: justify">
+            <div class="col-sm-3">
+                <h5>
+                    از سرمایه گزاران دعوت به عمل می آید تا در پروژه ساخت ربات صد درصد ایرانی در این شرکت سرمایه گزاری
+                    نمایند
+
+                </h5>
+
+            </div>
+            <div class="col-sm-3">
+                <h5>
+                    این شرکت آماده جذب سربازان وظیفه جهت گزراندن مدت خدمت وظیفه خود به صورت امریه در این شرکت دانش بنیان
+                    است.
+
+                </h5>
+
+
+            </div>
+            <div class="single-blog-post col-sm-6">
+                <div class="blog-post-area">
+                    <div class="single-blog-post">
+                        <div class="post-meta">
+                                        <span>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star-half-o"></i>
+								</span>
+                        </div>
+
+                        <h3>
+
+                        </h3>
+                        <button class="accordion" style="">
+                            <h4 style="color: tomato">برنامه نویسی مانیتورینگ</h4>
+                            این شرکت اولین شرکت تولید کننده نرم افزار مانیتورینگ رباتهای رنگ در خاور میانه است .
+                        </button>
+                        <br>
+                        <br>
+                        <button class="accordion" style="">
+                            <h4 style="color: tomato">طراحی انواع خطوط هوشمند</h4>
+                            این شرکت آماده طراحی و اجرای انواع خطوط هوشمند در سراسر ایران است .
+                        </button>
+                        <div class="panel">
+
+                        </div>
+                    </div>
+                </div><!--/blog-post-area-->
+            </div>
+
+        </div>
+
+    </div>
+    <img src="/static/images/home/projects.png" alt="" style="padding-top: 40px; padding-bottom: 40px"/>
+
+
+</div><!--/NewProduct_items-->

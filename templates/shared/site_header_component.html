@@ -1,0 +1,166 @@
+<!-- Header -->
+<header class="header">
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-12">
+                    <!-- Top Contact -->
+                    <div class="top-contact">
+                        <div class="single-contact"><i class="fa fa-phone"></i>{{ site_setting.phone }}</div>
+                        <div class="single-contact"><i class="fa fa-envelope-open"></i>{{ site_setting.email }}</div>
+                        <div class="single-contact"><i class="fa fa-clock-o"></i>ساعت کاری: 9 صبح تا 17:00 بعدازظهر
+                        </div>
+                    </div>
+                    <!-- End Top Contact -->
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="topbar-right">
+                        <!-- Social Icons -->
+                        <ul class="social-icons">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                        </ul>
+                        <!-- Right Bar -->
+                        <div class="right-bar">
+                            <!-- Search Bar -->
+                            <ul class="right-nav">
+                                <li class="top-search"><a href="#"><i class="fa fa-search"></i></a></li>
+                                <li class="bar"><a class="fa fa-bars"></a></li>
+                            </ul>
+                            <!--/ End Search Bar -->
+                            <!-- Search Form -->
+                            <div class="search-top">
+                                <form action="#" class="search-form" method="get">
+                                    <input type="text" name="s" value="" placeholder="جستجو کنید"/>
+                                    <button type="submit" id="searchsubmit"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
+                            <!--/ End Search Form -->
+                        </div>
+                        <!--/ End Right Bar -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ End Topbar -->
+    <!-- Middle Header -->
+    <div class="middle-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="middle-inner">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-3 col-12">
+                                <!-- Logo -->
+                                <div class="logo">
+                                    <!-- Image Logo -->
+                                    <div class="img-logo">
+                                        <a href="/">
+                                            <img src=" {{ site_setting.site_logo.url }} " alt="#">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="mobile-nav"></div>
+                            </div>
+                            <div class="col-lg-10 col-md-9 col-12">
+                                <div class="menu-area">
+                                    <!-- Main Menu -->
+                                    <nav class="navbar navbar-expand-lg">
+                                        <div class="navbar-collapse">
+                                            <div class="nav-inner">
+                                                <div class="menu-home-menu-container">
+                                                    <!-- Naviagiton -->
+                                                    <ul id="nav" class="nav main-menu menu navbar-nav">
+                                                        <li><a href="/">خانه</a></li>
+
+                                                        <li><a href="/m-driver">M-DRIVER</a></li>
+                                                        <li><a href="/">پروژه ها</a></li>
+
+                                                        <li class="icon-active"><a href="#">آموزش</a>
+                                                            <ul class="sub-menu">
+                                                                <li><a href="/robot-training/">آموزش ربات</a>
+
+                                                                <li><a href="/software_training/">آموزش نرم افزار</a>
+                                                                </li>
+
+
+                                                                <li><a href="/automation-training/">آموزش اتوماسیون
+                                                                    صنعتی</a>
+                                                                </li>
+
+                                                                <li><a href="#">آموزش
+                                                                    الکترونیک</a></li>
+                                                                <li><a href="#">آموزش تعمیرات
+                                                                    الکترونیک</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="icon-active"><a href="#">مقالات</a>
+                                                            <ul class="sub-menu">
+                                                                <li><a href="/articles/">ربات های صنعتی</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="/products/">فروشگاه</a></li>
+
+                                                        <li><a href="/contact-us/">تماس با ما</a></li>
+
+                                                        {#                                                        <li><a href="/about-us">درباره ما</a></li>#}
+
+
+                                                    </ul>
+                                                    <!--/ End Naviagiton -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                    <!--/ End Main Menu -->
+                                    <div class="right-button">
+                                        <a href="https://pub.daneshbonyan.ir/" class="bizwheel-btn">استعلام دانش
+                                            بنیان</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ End Middle Header -->
+    <!-- Sidebar Popup -->
+    <div class="sidebar-popup">
+        <div class="cross">
+            <a class="btn"><i class="fa fa-close"></i></a>
+        </div>
+        <div class="single-content">
+            <h4>درباره ما</h4>
+            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
+            <ul class="address-widget-list">
+                <li class="footer-mobile-number"><i class="fa fa-phone"></i>{{ site_setting.email }}</li>
+                <li class="footer-mobile-number"><i class="fa fa-envelope"></i>{{ slider.email }}</li>
+                <li class="footer-mobile-number"><i class="fa fa-map-marker"></i>ساختمان خانه اوتارا</li>
+            </ul>
+            <div class="side-button">
+                <a href="portfolio.html" class="bizwheel-btn theme-2 effect">نمایش نمونه کارها</a>
+            </div>
+        </div>
+        <div class="single-content">
+            <h4>پیوندهای مهم</h4>
+            <ul class="links">
+                <li><a href="#">درباره ما</a></li>
+                <li><a href="#">خدمات ما</a></li>
+                <li><a href="#">نمونه کارها</a></li>
+                <li><a href="#">برنامه قیمت گذاری</a></li>
+                <li><a href="#">وبلاگ و اخبار</a></li>
+                <li><a href="#">تماس با ما</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--/ Sidebar Popup -->
+</header>
+<!--/ End Header -->

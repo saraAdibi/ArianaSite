@@ -1,0 +1,589 @@
+{% extends 'shared/_layout.html' %}
+
+{% block title %}
+    شرکت اتوماسیون صنعتی آریانا | Maintenance and Industrial Automation
+{% endblock %}
+
+{% block content %}
+    <!-- Hero Slider -->
+    <section class="hero-slider style1">
+        <div class="home-slider">
+            <!-- Single Slider -->
+            {% for slider in sliders %}
+                <div class="single-slider" style="background-image:url('/static/img/slider-image/kuka robot78.png')">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-9 col-12">
+                                <div class="welcome-text">
+                                    <div class="hero-text">
+                                        <h4>دانش بنیان</h4>
+                                        <h1>شرکت اتوماسیون صنعتی آریانا</h1>
+                                        <div class="p-text">
+                                            <p style="color: black; font-size: 20px">نام كامل شركت جهت استعلام از سامانه
+                                                دانش بنيان : ره پویان گسترش اتوماسیون صنعتی آریانا
+
+
+                                            </p>
+                                        </div>
+                                        <div class="button">
+                                            <a href="https://pub.daneshbonyan.ir/" class="bizwheel-btn theme-1 effect">استعلام
+                                                دانش بنیان</a>
+                                            <!--                                    <a href="portfolio.html" class="bizwheel-btn theme-2 effect">نمایش نمونه کارها</a>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            <!--/ End Single Slider -->
+
+        </div>
+    </section>
+    <!--/ End Hero Slider -->
+
+    {% include 'home_module/activities.html' %}
+
+    <!-- Video Feature -->
+    <section class="video-feature side overlay section-bg">
+        <div class="container">
+            {% for introduce in introduce %}
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="img-feature ">
+                            <img src="{{ introduce.image.url }}" alt="Video Thumbnail">
+
+                            <!--                    <div class="video-play">-->
+                            <!--                        <a href="https://www.youtube.com/watch?v=RLlPLqrw8Q4" class="video video-popup mfp-iframe">-->
+                            <!--                            <i class="fa fa-play"></i>-->
+                            <!--                        </a>-->
+                            <!--                        <div class="waves-block">-->
+                            <!--                            <div class="waves wave-1"></div>-->
+                            <!--                            <div class="waves wave-2"></div>-->
+                            <!--                            <div class="waves wave-3"></div>-->
+                            <!--                        </div>-->
+                            <!--                    </div>-->
+                            <!--                    <span>{{introduce.title}}</span>-->
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="features-main ">
+                            <div class="title">
+                                <h2>{{ introduce.title }}</h2>
+                                <p>{{ introduce.introduce_txt }}</p>
+                            </div>
+                            <div class="b-features">
+                                <div class="row">
+                                    <!--                            <div class="col-lg-6 col-md-6 col-12">-->
+                                    <!--                                &lt;!&ndash; Single List Feature &ndash;&gt;-->
+                                    <!--                                <div class="single-list-feature">-->
+                                    <!--                                    <i class="fa fa-code"></i>-->
+                                    <!--                                    <h4></h4>-->
+                                    <!--                                    <p>{{introduce.activities}}</p>-->
+                                    <!--                                </div>-->
+                                    <!--                                &lt;!&ndash;/ End Single List Feature &ndash;&gt;-->
+                                    <!--                            </div>-->
+                                    <!-- Single List Feature -->
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <!-- Single List Feature -->
+                                        <div class="single-list-feature">
+                                            <i class="fa fa-newspaper-o"></i>
+                                            <h4></h4>
+                                            <p>{{ introduce.activities }}</p>
+                                        </div>
+                                        <!--/ End Single List Feature -->
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <!-- Single List Feature -->
+                                        <div class="single-list-feature">
+                                            <i class="fa fa-newspaper-o"></i>
+                                            <h4></h4>
+                                            <p>از سرمایه گزاران دعوت به عمل می آید تا در پروژه ساخت ربات صد درصد ایرانی
+                                                در این
+                                                شرکت سرمایه گزاری نمایند
+
+                                            </p>
+                                        </div>
+                                        <!--/ End Single List Feature -->
+                                    </div>
+
+                                    <!--                            <div class="col-lg-6 col-md-6 col-12">-->
+                                    <!--                                &lt;!&ndash; Single List Feature &ndash;&gt;-->
+                                    <!--                                <div class="single-list-feature">-->
+                                    <!--                                    <i class="fa fa-coffee"></i>-->
+                                    <!--                                    <h4>بدون دردسر</h4>-->
+                                    <!--                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>-->
+                                    <!--                                </div>-->
+                                    <!--                                &lt;!&ndash;/ End Single List Feature &ndash;&gt;-->
+                                    <!--                            </div>-->
+                                    <!--                            <div class="col-lg-6 col-md-6 col-12">-->
+                                    <!--                                <div class="single-list-feature">-->
+                                    <!--                                    <i class="fa fa-html5"></i>-->
+                                    <!--                                    <h4>طراحی خلاقانه</h4>-->
+                                    <!--                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>-->
+                                    <!--                                </div>-->
+                                    <!--                                &lt;!&ndash;/ End Single List Feature &ndash;&gt;-->
+                                    <!--                            </div>-->
+
+                                </div>
+                            </div>
+                            <!--                    <div class="feature-btn">-->
+                            <!--                        <a href="contact.html" class="bizwheel-btn theme-2">بیشتر دانستن</a>-->
+                            <!--                    </div>-->
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}}
+
+        </div>
+    </section>
+    <!--/ End Video Feature -->
+
+    <!-- porpose -->
+    <section class="pf-details  section-space">
+        <div class="container">
+
+            <div class="row">
+                {% for cooperate in cooperate %}
+                    <div class="col-12">
+                        <!-- Portfolio Content -->
+                        <div class="single-content">
+                            <h1>{{ cooperate.title }}</h1>
+                            <p style="text-align: justify">{{ cooperate.text }}</p>
+                            <p style="text-align: justify">{{ cooperate.inviting_txt }}</p>
+
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!--end porpose-->
+
+    <!-- Services -->
+    <section class="services section-bg section-space">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title style2 text-center">
+                        <div class="section-top">
+                            <h1><span>ارايه خدمات پيشرفته</span>
+                                <b>خدمات :</b></h1>
+                            <h4>
+                                ما خدمات و پشتیبانی با کیفیت ارائه می دهیم ...
+
+                            </h4>
+                        </div>
+                        <!--                    <div class="section-bottom">-->
+                        <!--                        <div class="text-style-two">-->
+                        <!--                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک-->
+                        <!--                                است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>-->
+                        <!--                        </div>-->
+                        <!--                    </div>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                {% for services in services %}
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <!-- Single Service -->
+                        <div class="single-service">
+                            <div class="service-head">
+                                <div class="icon-bg"><i class="fa fa-cube"></i></div>
+                                <img src="{{ services.image.url }}" alt="#">
+                            </div>
+                            <div class="service-content">
+                                <h4><a href="service-market.html">{{ services.service_title }}</a></h4>
+                                <p>{{ services.service_txt }}</p>
+                                {% if url_title is not None %}
+                                    <a class="btn" href="{{ services.url }}"><i
+                                            class="fa fa-arrow-circle-o-left"></i>{{ services.url_title }}</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <!--/ End Single Service -->
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!--/ End Services -->
+
+    <!-- Call To Action -->
+    <section class="call-action overlay" style="background-image:url('/static/img/cta-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-12">
+                    <div class="call-inner">
+                        <h4 style="text-align: center; margin-top: 15px">"این شرکت آماده همکاری در زمینه فعالیت خود با
+                            سایر اشخاص حقوقی و حقیقی است"</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-12">
+                    <div class="button">
+                        <a href="/contact-us/" class="bizwheel-btn">تماس با ما</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ End Call to action -->
+
+    <!-- Faqs -->
+    {% include 'home_module/acordeon.html' %}
+    <!--/ End Faqs -->
+
+    <!-- Faqs -->
+{#    {% include 'home_module/portfolio.html' %}#}
+    <!--/ End Faqs -->
+
+
+
+    <!-- Testimonials -->
+    <section class="testimonials section-space" style="background-image:url('/static/img/testimonial-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-9 col-12">
+                    <div class="section-title default text-left">
+                        <div class="section-top">
+                            <h1><b>مشتریان راضی ما</b></h1>
+                        </div>
+                        <div class="section-bottom">
+                            <div class="text"><p>برخی از مشتریان عالی و بررسی آنها</p></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-inner">
+                        <div class="testimonial-slider">
+
+                            {% for customers in customers %}
+                                <!-- Single Testimonial -->
+                                <div class="single-slider">
+                                    <ul class="star-list">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                    <p><strong>{{ customers.text }}</strong></p>
+                                    <!-- Client Info -->
+                                    <div class="t-info">
+                                        <div class="t-left">
+                                            <div class="client-head"><img src="{{ customers.image.url }}" alt="#"></div>
+                                            <h2>{{ customers.name }}<span>{{ customers.post }}</span></h2>
+                                        </div>
+                                        <div class="t-right">
+                                            <div class="quote"><i class="fa fa-quote-right"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            <!-- / End Single Testimonial -->
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ End Testimonials -->
+
+    <!-- Counterup -->
+    <section class="counterup">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Counterup -->
+                    <div class="single-counter">
+                        <div class="icon"><i class="fa fa-book"></i></div>
+                        <div class="conter-content">
+                            <div class="counter-head">
+                                <h3><b class="number">21</b><span>+</span></h3>
+                            </div>
+                            <p>تقدیر نامه ها</p>
+                        </div>
+                    </div>
+                    <!--/ End Single Counterup -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Counterup -->
+                    <div class="single-counter">
+                        <div class="icon"><i class="fa fa-users"></i></div>
+                        <div class="conter-content">
+                            <div class="counter-head">
+                                <h3><b class="number">148</b><span>+</span></h3>
+                            </div>
+                            <p>نرم افزار</p>
+                        </div>
+                    </div>
+                    <!--/ End Single Counterup -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Counterup -->
+                    <div class="single-counter">
+                        <div class="icon"><i class="fa fa-life-ring"></i></div>
+                        <div class="conter-content">
+                            <div class="counter-head">
+                                <h3><b class="number">85</b><span>+</span></h3>
+                            </div>
+                            <p>پروژه ها</p>
+                        </div>
+                    </div>
+                    <!--/ End Single Counterup -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Single Counterup -->
+                    <div class="single-counter">
+                        <div class="icon"><i class="fa fa-fire"></i></div>
+                        <div class="conter-content">
+                            <div class="counter-head">
+                                <h3><b class="number">235</b><span>+</span></h3>
+                            </div>
+                            <p>کار شرکت</p>
+                        </div>
+                    </div>
+                    <!--/ End Single Counterup -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ End Counterup -->
+
+    <!-- Our Team -->
+    <section class="team section-bg section-space">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title  style2 text-center">
+                        <div class="section-top">
+                            <h1><span>تیم کاری شرکت آریانا</span><b>آشنایی با مدیران ارشد شرکت اتوماسیون صنعتی آریانا
+                            </b></h1>
+                            <!--                        <h4>رهبران خبره ما منتظر شما هستند.</h4>-->
+                        </div>
+                        <!--                    <div class="section-bottom">-->
+                        <!--                        <div class="text-style-two">-->
+                        <!--                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک-->
+                        <!--                                است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>-->
+                        <!--                        </div>-->
+                        <!--                    </div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="team-slider">
+                {% for manager in manager %}
+                    <div class="single-slider">
+                        <!-- Single Team -->
+                        <div class="single-team">
+                            <div class="team-head">
+                                <img src="{{ manager.image.url }}" alt="#">
+                                <ul class="team-social">
+                                    <li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="t-content" style="text-align: center">
+                                <div class="content-inner">
+                                    <h4 class="name"><a href="#">{{ manager.name }}</a></h4>
+                                    <span class="designation">{{ manager.post }}</span>
+                                    <div>
+                                        <p style="text-align: center">{{ manager.fax }}</p>
+                                        <p style="text-align: center">{{ manager.phone }}</p>
+                                        <p style="text-align: center">{{ manager.email }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/ End Single Team -->
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!--/ End Team -->
+
+    {#    <!-- Latest Blog -->#}
+    {#    <section class="latest-blog section-space">#}
+    {#        <div class="container">#}
+    {#            <div class="row">#}
+    {#                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">#}
+    {#                    <div class="section-title default text-center">#}
+    {#                        <div class="section-top">#}
+    {#                            <h1><span>آخرین</span><b> منتشر شده</b></h1>#}
+    {#                        </div>#}
+    {#                        <div class="section-bottom">#}
+    {#                            <div class="text">#}
+    {#                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان#}
+    {#                                    گرافیک#}
+    {#                                    است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>#}
+    {#                            </div>#}
+    {#                        </div>#}
+    {#                    </div>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#            <div class="row">#}
+    {#                <div class="col-12">#}
+    {#                    <div class="blog-latest blog-latest-slider">#}
+    {#                        <div class="single-slider">#}
+    {#                            <!-- Single Blog -->#}
+    {#                            <div class="single-news ">#}
+    {#                                <div class="news-head overlay">#}
+    {#                                <span class="news-img"#}
+    {#                                      style="background-image:url('/static/img/blog/blog-1.jpg')"></span>#}
+    {#                                    <div class="cat"><a href="#" class="bizwheel-btn theme-2">کسب و کار</a></div>#}
+    {#                                </div>#}
+    {#                                <div class="news-body">#}
+    {#                                    <div class="news-content">#}
+    {#                                        <h3 class="news-title"><a href="blog-single.html">ما بهترین خدمات مشاوره و#}
+    {#                                            خلاقیت را#}
+    {#                                            به شما ارائه می دهیم</a></h3>#}
+    {#                                        <ul class="news-meta">#}
+    {#                                            <li class="date"><i class="fa fa-calendar"></i>شهریور 1399</li>#}
+    {#                                            <li class="view"><i class="fa fa-comments"></i>15</li>#}
+    {#                                            <li class="heart"><i class="fa fa-heart"></i>35</li>#}
+    {#                                        </ul>#}
+    {#                                        <div class="news-text">#}
+    {#                                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از#}
+    {#                                                طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان#}
+    {#                                                که#}
+    {#                                                لازم است و برای شرایط فعلی تکنولوژی مورد نیاز</p>#}
+    {#                                            <a href="blog-single.html" class="bizwheel-btn"><i#}
+    {#                                                    class="fa fa-angle-left"></i>ادامه#}
+    {#                                                مطلب</a>#}
+    {#                                        </div>#}
+    {#                                    </div>#}
+    {#                                </div>#}
+    {#                            </div>#}
+    {#                            <!--/ End Single Blog -->#}
+    {#                        </div>#}
+    {#                        <div class="single-slider">#}
+    {#                            <!-- Single Blog -->#}
+    {#                            <div class="single-news ">#}
+    {#                                <div class="news-head overlay">#}
+    {#                                <span class="news-img"#}
+    {#                                      style="background-image:url('/static/img/blog/blog-2.jpg')"></span>#}
+    {#                                    <div class="cat"><a href="#" class="bizwheel-btn theme-2">مشاوره</a></div>#}
+    {#                                </div>#}
+    {#                                <div class="news-body">#}
+    {#                                    <div class="news-content">#}
+    {#                                        <h3 class="news-title"><a href="blog-single.html">ما بهترین خدمات مشاوره و#}
+    {#                                            خلاقیت را#}
+    {#                                            به شما ارائه می دهیم</a></h3>#}
+    {#                                        <ul class="news-meta">#}
+    {#                                            <li class="date"><i class="fa fa-calendar"></i>شهریور 1399</li>#}
+    {#                                            <li class="view"><i class="fa fa-comments"></i>10</li>#}
+    {#                                            <li class="heart"><i class="fa fa-heart"></i>55</li>#}
+    {#                                        </ul>#}
+    {#                                        <div class="news-text">#}
+    {#                                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از#}
+    {#                                                طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان#}
+    {#                                                که#}
+    {#                                                لازم است و برای شرایط فعلی تکنولوژی مورد نیاز</p>#}
+    {#                                            <a href="blog-single.html" class="bizwheel-btn"><i#}
+    {#                                                    class="fa fa-angle-left"></i>ادامه#}
+    {#                                                مطلب</a>#}
+    {#                                        </div>#}
+    {#                                    </div>#}
+    {#                                </div>#}
+    {#                            </div>#}
+    {#                            <!--/ End Single Blog -->#}
+    {#                        </div>#}
+    {#                        <div class="single-slider">#}
+    {#                            <!-- Single Blog -->#}
+    {#                            <div class="single-news ">#}
+    {#                                <div class="news-head overlay">#}
+    {#                                <span class="news-img"#}
+    {#                                      style="background-image:url('/static/img/blog/blog-1.jpg')"></span>#}
+    {#                                    <div class="cat"><a href="#" class="bizwheel-btn theme-2">کسب و کار</a></div>#}
+    {#                                </div>#}
+    {#                                <div class="news-body">#}
+    {#                                    <div class="news-content">#}
+    {#                                        <h3 class="news-title"><a href="blog-single.html">ما بهترین خدمات مشاوره و#}
+    {#                                            خلاقیت را#}
+    {#                                            به شما ارائه می دهیم</a></h3>#}
+    {#                                        <ul class="news-meta">#}
+    {#                                            <li class="date"><i class="fa fa-calendar"></i>شهریور 1399</li>#}
+    {#                                            <li class="view"><i class="fa fa-comments"></i>15</li>#}
+    {#                                            <li class="heart"><i class="fa fa-heart"></i>35</li>#}
+    {#                                        </ul>#}
+    {#                                        <div class="news-text">#}
+    {#                                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از#}
+    {#                                                طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان#}
+    {#                                                که#}
+    {#                                                لازم است و برای شرایط فعلی تکنولوژی مورد نیاز</p>#}
+    {#                                            <a href="blog-single.html" class="bizwheel-btn"><i#}
+    {#                                                    class="fa fa-angle-left"></i>ادامه#}
+    {#                                                مطلب</a>#}
+    {#                                        </div>#}
+    {#                                    </div>#}
+    {#                                </div>#}
+    {#                            </div>#}
+    {#                            <!--/ End Single Blog -->#}
+    {#                        </div>#}
+    {#                        <div class="single-slider">#}
+    {#                            <!-- Single Blog -->#}
+    {#                            <div class="single-news ">#}
+    {#                                <div class="news-head overlay">#}
+    {#                                <span class="news-img"#}
+    {#                                      style="background-image:url('/static/img/blog/blog-2.jpg')"></span>#}
+    {#                                    <div class="cat"><a href="#" class="bizwheel-btn theme-2">مشاوره</a></div>#}
+    {#                                </div>#}
+    {#                                <div class="news-body">#}
+    {#                                    <div class="news-content">#}
+    {#                                        <h3 class="news-title"><a href="blog-single.html">ما بهترین خدمات مشاوره و#}
+    {#                                            خلاقیت را#}
+    {#                                            به شما ارائه می دهیم</a></h3>#}
+    {#                                        <ul class="news-meta">#}
+    {#                                            <li class="date"><i class="fa fa-calendar"></i>شهریور 1399</li>#}
+    {#                                            <li class="view"><i class="fa fa-comments"></i>10</li>#}
+    {#                                            <li class="heart"><i class="fa fa-heart"></i>55</li>#}
+    {#                                        </ul>#}
+    {#                                        <div class="news-text">#}
+    {#                                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از#}
+    {#                                                طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان#}
+    {#                                                که#}
+    {#                                                لازم است و برای شرایط فعلی تکنولوژی مورد نیاز</p>#}
+    {#                                            <a href="blog-single.html" class="bizwheel-btn"><i#}
+    {#                                                    class="fa fa-angle-left"></i>ادامه#}
+    {#                                                مطلب</a>#}
+    {#                                        </div>#}
+    {#                                    </div>#}
+    {#                                </div>#}
+    {#                            </div>#}
+    {#                            <!--/ End Single Blog -->#}
+    {#                        </div>#}
+    {#                    </div>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </section>#}
+    {#    <!--/ End Latest Blog -->#}
+
+    <!-- Client Area -->
+    <div class="clients section-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="partner-slider">
+                        <!-- Single client -->
+                        {% for related_companies in related_companies %}
+                            <div class="single-slider">
+                                <div class="single-client">
+                                    <a href="#" target="_blank"><img src="{{ related_companies.image.url }}"
+                                                                     alt="#"></a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <!--/ End Single client -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ End Client Area -->
+
+{% endblock %}

@@ -1,0 +1,92 @@
+{% extends 'shared/_layout.html' %}
+{% load poll_extras %}
+{% load thumbnail %}
+{% load render_partial %}
+
+{% block title %}
+    آموزش ربات
+{% endblock %}
+
+{% block content %}
+    <!-- Breadcrumb -->
+    <div class="breadcrumbs overlay" style="background-image:url('/static/img/breadcrumb.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bread-inner">
+                        <!-- Bread Menu -->
+                        <div class="bread-menu">
+                            <ul>
+                                <li><a href="index.html">خانه</a></li>
+                                <li><a href="blog-standard.html">وبلاگ استاندارد</a></li>
+                            </ul>
+                        </div>
+                        <!-- Bread Title -->
+                        <div class="bread-title"><h2>اخبار و مقالات</h2></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / End Breadcrumb -->
+
+    <!-- Blog Layout -->
+    <section class="blog-layout blog-latest section-space">
+        <div class="container">
+            <div class="row">
+
+
+                {% for readmore in object_list %}
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <!-- Single Blog -->
+                        <div class="single-news">
+                            <div class="news-head overlay">
+                                <span class="news-img"
+                                      style="background-image:url('{{ readmore.image.url }}')"></span>
+                                <a href="#" class="bizwheel-btn theme-2">ادامه مطلب</a>
+                            </div>
+                            <div class="news-body">
+                                <div class="news-content">
+                                    <h3 class="news-title"><a href="#">{{ readmore.title }}</a></h3>
+                                    <ul class="news-meta">
+                                        {#                                    										<li class="date"><i class="fa fa-calendar"></i>شهریور 1399</li>#}
+                                        {#                                    										<li class="view"><i class="fa fa-comments"></i>89</li>#}
+                                        {#                                    										<li class="heart"><i class="fa fa-heart"></i>20</li>#}
+                                    </ul>
+                                    <div class="news-text">
+
+                                        <p>{{ readmore.text|linebreaksbr }}</p>
+                                        {% if readmore.url_title is not None %}
+                                            <div class="button">
+                                                <a href="{{ readmore.url }}" class="bizwheel-btn"><i
+                                                        class="fa fa-arrow-circle-o-left"></i>{{ readmore.url_title }}</a>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--/ End Single Blog -->
+                    </div>
+                {% endfor %}
+            </div>
+            {#				<div class="row">#}
+            {#					<div class="col-12">#}
+            {#						<!-- Pagination -->#}
+            {#						<div class="pagination-plugin">#}
+            {#							<ul class="pagination-list">#}
+            {#								<li class="prev"><a href="#">قبلی</a></li>#}
+            {#								<li class="page-numbers"><a href="#">1</a></li>#}
+            {#								<li class="page-numbers current"><a href="#">2</a></li>#}
+            {#								<li class="page-numbers"><a href="#">3</a></li>#}
+            {#								<li class="next"><a href="#">بعدی</a></li>#}
+            {#							</ul>#}
+            {#						</div>#}
+            {#						<!--/ End Pagination -->#}
+            {#					</div>#}
+            {#				</div>#}
+        </div>
+    </section>
+    <!--/ End Blog Layout -->
+{% endblock %}

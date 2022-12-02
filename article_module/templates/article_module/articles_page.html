@@ -1,0 +1,162 @@
+{% extends 'shared/_layout.html' %}
+{% load poll_extras %}
+{% load thumbnail %}
+{% load render_partial %}
+
+{% block title %}
+    لیست مقالات
+{% endblock %}
+
+{% block content %}
+     <!-- Breadcrumb -->
+    <div class="breadcrumbs overlay" style="background-image:url('/static/img/team/im.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bread-inner">
+                        <!-- Bread Menu -->
+                        <div class="bread-menu">
+                            <ul>
+                                <li><a href="/">خانه</a></li>
+                                <li><a href="/articles/">ربات</a></li>
+                            </ul>
+                        </div>
+                        <!-- Bread Title -->
+                        <div class="bread-title"><h2>ربات های کار کرده</h2></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / End Breadcrumb -->
+    <!-- Service Single -->
+    <section class="service-single section-space">
+        <div class="container">
+
+            <div class="row">
+                {% for article in object_list %}
+
+                    <div class="col-lg-8 col-12">
+                        <!-- Service Image -->
+                        <div class="service-img">
+                            {#                            <ul class=" col-10">#}
+                            {#                                <li><i class="fa fa-clock-o"></i>{{ article.get_jalali_create_time }}</li>#}
+                            {#                                <li><i class="fa fa-calendar"></i>{{ article.create_date | show_jalali_date }}#}
+                            {#                            </ul>#}
+                            <img src="{{ article.image.url }}" alt="#">
+
+                        </div>
+                        <!-- Service Content -->
+                        <div class="service-content">
+                            <h2>{{ article.title }}</h2>
+                            <p>{{ article.text|linebreaks }}</p>
+                            {#                            <div class="row service-space">#}
+                            {#                                <div class="col-lg-6 col-md-6 col-12">#}
+                            {#                                    <!-- Service Feature -->#}
+                            {#                                    <div class="small-list-feature">#}
+                            {#                                        <h3>ما نوآوری شما را فراهم می کنیم</h3>#}
+                            {#                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از#}
+                            {#                                            طراحان#}
+                            {#                                            گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم#}
+                            {#                                            است</p>#}
+                            {#                                        <ul>#}
+                            {#                                            <li><i class="fa fa-check"></i>ما خدمات خلاقانه ای را به شما ارائه می دهیم#}
+                            {#                                            </li>#}
+                            {#                                            <li><i class="fa fa-check"></i>فقط روش پرطرفدار بسیار جذاب</li>#}
+                            {#                                            <li><i class="fa fa-check"></i>فقط روش پرطرفدار بسیار جذاب</li>#}
+                            {#                                            <li><i class="fa fa-check"></i>خدمات خلاقانه مهمترین است</li>#}
+                            {#                                            <li><i class="fa fa-check"></i>99٪ ضمانت به موقع سرور</li>#}
+                            {#                                            <li><i class="fa fa-check"></i>پشتیبانی زنده 24/7</li>#}
+                            {#                                        </ul>#}
+                            {#                                    </div>#}
+                            {#                                </div>#}
+                            {#                                <div class="col-lg-6 col-md-6 col-12">#}
+                            {#                                    <!-- Service Img -->#}
+                            {#                                    <div class="modern-img-feature">#}
+                            {#                                        <img src="/static/img/services/service-small.jpg" alt="#">#}
+                            {#                                        <div class="video-play">#}
+                            {#                                            <a href="https://www.youtube.com/watch?v=RLlPLqrw8Q4"#}
+                            {#                                               class="video video-popup mfp-iframe"><i class="fa fa-play"></i></a>#}
+                            {#                                        </div>#}
+                            {#                                    </div>#}
+                            {#                                </div>#}
+                            {#                            </div>#}
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <!-- Service Sidebar -->
+                        <div class="service-sidebar">
+                            <!-- Single Sidebar -->
+
+
+                            <div class="service-single-sidebar widget">
+                                <h2 class="widget-title">مقالات</h2>
+                                <div class="menu-service-menu-container">
+                                    <!-- Service Menu -->
+                                    <ul id="menu-service-menu" class="menu">
+                                        <li class="active"><a href="/articles/">انتخاب و خرید ربات های کار کرده
+                                        </a></li>
+                                        {#                                        <li><a href="service-develop.html">توسعه وب</a></li>#}
+                                        {#                                        <li><a href="service-market.html">تحقیقات بازار</a></li>#}
+                                        {#                                        <li><a href="service-advertise.html">نمونه تبلیغات</a></li>#}
+                                        {#                                        <li><a href="service-design.html">طراحی روند</a></li>#}
+                                        {#                                        <li><a href="service-marketing.html">بازاریابی دیجیتال</a></li>#}
+                                    </ul>
+                                </div>
+                            </div>
+                            {#                        {% endfor %}#}
+                            <!-- Single Sidebar -->
+                            <div class="service-single-sidebar widget">
+                                {#                                <h2 class="widget-title">فرم را پر کنید</h2>#}
+                                {#                                <div class="contact-form-area service">#}
+                                {#                                    <!-- Service Form -->#}
+                                {#                                    <form class="form">#}
+                                {#                                        <div class="row">#}
+                                {#                                            <div class="col-12">#}
+                                {#                                                <div class="form-group">#}
+                                {#                                                    <div class="icon"><i class="fa fa-user"></i></div>#}
+                                {#                                                    <input type="text" name="user-name"#}
+                                {#                                                           placeholder="نام و نام خانوادگی">#}
+                                {#                                                </div>#}
+                                {#                                            </div>#}
+                                {#                                            <div class="col-12">#}
+                                {#                                                <div class="form-group">#}
+                                {#                                                    <div class="icon"><i class="fa fa-envelope"></i></div>#}
+                                {#                                                    <input type="email" name="email" placeholder="ایمیل شما">#}
+                                {#                                                </div>#}
+                                {#                                            </div>#}
+                                {#                                            <div class="col-12">#}
+                                {#                                                <div class="form-group">#}
+                                {#                                                    <div class="icon"><i class="fa fa-tag"></i></div>#}
+                                {#                                                    <input type="text" name="subject" placeholder="موضوع را تایپ کنید">#}
+                                {#                                                </div>#}
+                                {#                                            </div>#}
+                                {#                                            <div class="col-12">#}
+                                {#                                                <div class="form-group">#}
+                                {#                                                    <div class="icon"><i class="fa fa-pencil"></i></div>#}
+                                {#                                                    <textarea type="textarea" rows="5"></textarea>#}
+                                {#                                                </div>#}
+                                {#                                            </div>#}
+                                {#                                            <div class="col-12">#}
+                                {#                                                <div class="form-group button">#}
+                                {#                                                    <button type="submit" class="bizwheel-btn theme-2">ارسال</button>#}
+                                {#                                                </div>#}
+                                {#                                            </div>#}
+                                {#                                        </div>#}
+                                {#                                    </form>#}
+                                {#                                    <!--/ End Service Form -->#}
+                                {#                                </div>#}
+
+                                <img src="/static/img/articles/ariana22.png">
+                            </div>
+                        </div>
+                        <!--/ End Service Sidebar -->
+                    </div>
+                    </div>
+
+                {% endfor %}
+        </div>
+    </section>
+    <!--/ End Services -->
+{% endblock %}

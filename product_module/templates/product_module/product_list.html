@@ -1,0 +1,107 @@
+{% extends 'shared/_layout.html' %}
+{% load thumbnail %}
+
+{% block title %}لیست محصولات{% endblock %}
+
+{% block content %}
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumbs overlay" style="background-image:url('/static/img/breadcrumb.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bread-inner">
+                        <!-- Bread Menu -->
+                        <div class="bread-menu">
+                            <ul>
+                                <li><a href="/">خانه</a></li>
+                                <li><a href="/products/">قیمت گذاری</a></li>
+                            </ul>
+                        </div>
+                        <!-- Bread Title -->
+                        <div class="bread-title"><h2>محصولات</h2></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / End Breadcrumb -->
+
+    <!-- برنامه قیمت گذاری -->
+    <section class="pricing section-space">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
+                    <div class="section-title default text-center">
+                        <div class="section-top">
+                            <h1><span>قیمت گذاری</span><b>فروشگاه آریانا</b></h1>
+                        </div>
+                        {#							<div class="section-bottom">#}
+                        {#								<div class="text">#}
+                        {#									<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>#}
+                        {#								</div>#}
+                        {#							</div>#}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                {% for product in products %}
+
+                <div class="col-lg-4 col-md-4 col-12">
+                    <!-- Single pricing -->
+                    <div class="single-pricing">
+                        <!-- Price Head -->
+                        <div class="price-head">
+                            <h4 class="small-title">{{ product.short_description }}<span></span></h4>
+{#                            <div class="icon-head">#}
+{#                                <i class="fa fa-bicycle"></i>#}
+{#                            </div>#}
+                            <img src="{{ product.image.url }}" alt="">
+                        </div>
+                        <h2 class="price"><span>{{ product.price }} <b class="renew"> تومان </b> </span></h2>
+                        <ul class="price-list">
+
+                            <li>{{ product.description|linebreaksbr }}</li>
+                        </ul>
+                        <div class="button">
+                            <a class="bizwheel-btn theme-1" href="/contact-us/">هم اکنون خریداری کنید</a>
+                        </div>
+                    </div>
+                    <!--/ End Single pricing -->
+                </div>
+
+                {% endfor %}
+
+                {#					<div class="col-lg-4 col-md-4 col-12">#}
+                {#						<!-- Single pricing -->#}
+                {#						<div class="single-pricing active">#}
+                {#							<!-- Price Head -->#}
+                {#							<div class="price-head">#}
+                {#								<div class="p-best"><p>بهترین برنامه<span>25% تخفیف</span></p></div>#}
+                {#								<h4 class="small-title">متوسط<span>عالی برای تجارت متوسط</span></h4>#}
+                {#								<div class="icon-head">#}
+                {#									<i class="fa fa-bicycle"></i>#}
+                {#								</div>#}
+                {#							</div>#}
+                {#							<h2 class="price"><span>39 <b> تومان </b> </span><b class="renew">ماهانه </b></h2>#}
+                {#							<ul class="price-list">#}
+                {#								<li>وب سایت رایگان</li>#}
+                {#								<li>فضای دیسک نامحدود</li>#}
+                {#								<li>طراحی خلاقانه</li>#}
+                {#								<li>خدمات مشاوره رایگان</li>#}
+                {#								<li>پشتیبانی زنده 24/7</li>#}
+                {#								<li>99٪ ضمانت</li>#}
+                {#							</ul>#}
+                {#							<div class="button">#}
+                {#								<a class="bizwheel-btn theme-1" href="contact.html">هم اکنون خریداری کنید</a>#}
+                {#							</div>#}
+                {#						</div>#}
+                {#						<!--/ End Single pricing -->#}
+                {#					</div>#}
+
+            </div>
+        </div>
+    </section>
+    <!--/ End برنامه قیمت گذاری -->
+{% endblock %}
