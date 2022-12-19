@@ -1,5 +1,6 @@
 {% extends 'shared/_layout.html' %}
-
+<meta name="description" property="og:description" content="شرکت اتوماسیون صنعتی آریانا(دانش بنیان)">
+<meta name="keywords" content="kuka, robot, ربات ,ربات صنعتی ,ربات کوکا ,دانش بنیان ,صنعت, indistry, automation">
 {% block title %}
     شرکت اتوماسیون صنعتی آریانا | Maintenance and Industrial Automation
 {% endblock %}
@@ -53,7 +54,7 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-12">
                         <div class="img-feature ">
-                            <img src="{{ introduce.image.url }}" alt="Video Thumbnail">
+                            <img src="{{ introduce.image.url }}" alt="introducing site">
 
                             <!--                    <div class="video-play">-->
                             <!--                        <a href="https://www.youtube.com/watch?v=RLlPLqrw8Q4" class="video video-popup mfp-iframe">-->
@@ -193,7 +194,7 @@
                         <div class="single-service">
                             <div class="service-head">
                                 <div class="icon-bg"><i class="fa fa-cube"></i></div>
-                                <img src="{{ services.image.url }}" alt="#">
+                                <img src="{{ services.image.url }}" alt="service image">
                             </div>
                             <div class="service-content">
                                 <h4><a href="service-market.html">{{ services.service_title }}</a></h4>
@@ -237,7 +238,7 @@
     <!--/ End Faqs -->
 
     <!-- Faqs -->
-{#    {% include 'home_module/portfolio.html' %}#}
+    {#    {% include 'home_module/portfolio.html' %}#}
     <!--/ End Faqs -->
 
 
@@ -271,7 +272,7 @@
                                     <!-- Client Info -->
                                     <div class="t-info">
                                         <div class="t-left">
-                                            <div class="client-head"><img src="{{ customers.image.url }}" alt="#"></div>
+                                            <div class="client-head"><img src="{{ customers.image.url }}" alt="customers photo"></div>
                                             <h2>{{ customers.name }}<span>{{ customers.post }}</span></h2>
                                         </div>
                                         <div class="t-right">
@@ -378,7 +379,7 @@
                         <!-- Single Team -->
                         <div class="single-team">
                             <div class="team-head">
-                                <img src="{{ manager.image.url }}" alt="#">
+                                <img src="{{ manager.image.url }}" alt="managers photo">
                                 <ul class="team-social">
                                     <li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
@@ -574,7 +575,7 @@
                             <div class="single-slider">
                                 <div class="single-client">
                                     <a href="#" target="_blank"><img src="{{ related_companies.image.url }}"
-                                                                     alt="#"></a>
+                                                                     alt="related companies"></a>
                                 </div>
                             </div>
                         {% endfor %}

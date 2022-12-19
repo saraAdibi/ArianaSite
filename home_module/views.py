@@ -51,15 +51,27 @@ def site_footer_component(request):
     return render(request, 'shared/site_footer_component.html', context)
 
 
-class AboutView(TemplateView):
-    template_name = 'home_module/about_page.html'
+class MDRIVER(TemplateView):
+    template_name = 'home_module/m-driver.html'
 
     def get_context_data(self, **kwargs):
-        context = super(AboutView, self).get_context_data(**kwargs)
+        context = super(MDRIVER, self).get_context_data(**kwargs)
         site_setting: SiteSetting = SiteSetting.objects.filter(is_main_setting=True).first()
         mdriver = MDriver.objects.all()
         context['site_setting'] = site_setting
         context['mdriver'] = mdriver
+
+        return context
+
+class AboutUs(TemplateView):
+    template_name = 'home_module/m-driver.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(AboutUs, self).get_context_data(**kwargs)
+        site_setting: SiteSetting = SiteSetting.objects.filter(is_main_setting=True).first()
+        about_us = MDriver.objects.all()
+        context['site_setting'] = site_setting
+        context['about-us'] = about_us
 
         return context
 

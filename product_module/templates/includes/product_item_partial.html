@@ -6,10 +6,10 @@
             <div class="productinfo text-center">
                 {% if product.image %}
                     {% thumbnail product.image "268x250" quality=90 crop='center' as im %}
-                        <img src="{{ im.url }}">
+                        <img src="{{ im.url }}" alt="تصویر محصول">
                     {% endthumbnail %}
                 {% else %}
-                    <img src="/static/images/shop/product.jpg" alt="">
+                    <img src="/static/images/shop/product.jpg" alt="تصویر محصول">
                 {% endif %}
                 <h2>{{ product.price }} تومان</h2>
                 <p>{{ product.title }}</p>

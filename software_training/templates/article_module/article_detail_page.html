@@ -4,7 +4,7 @@
 {% load thumbnail %}
 
 {% block title %}
-    جزییات مقاله
+     مقاله - شرکت اتوماسیون صنعتی آریانا
 {% endblock %}
 
 {% block content %}
@@ -36,7 +36,7 @@
                             </div>
                             <a href="">
                                 {% thumbnail article.image "862x398" quality=95 crop='center' as im %}
-                                    <img src="{{ im.url }}">
+                                    <img src="{{ im.url }}" alt="تصویر مقاله">
                                 {% endthumbnail %}
                             </a>
                             <p>
@@ -51,7 +51,7 @@
 
                     <div class="media commnets">
                         <a class="pull-right" href="#">
-                            <img class="media-object" src="/static/images/blog/Customer.jpg" alt="">
+                            <img class="media-object" src="/static/images/blog/Customer.jpg" alt="تصویر مشتری">
                         </a>
                         <div class="media-body">
                             <h4 class="media-heading">نویسنده 1</h4>
@@ -76,7 +76,7 @@
                             <li class="media">
 
                                 <a class="pull-right" href="#">
-                                    <img class="media-object" src="/static/images/blog/Customer.jpg" alt="">
+                                    <img class="media-object" src="/static/images/blog/Customer.jpg" alt="مشتری">
                                 </a>
                                 <div class="media-body">
                                     <ul class="sinlge-post-meta">
@@ -94,7 +94,7 @@
                             </li>
                             <li class="media second-media">
                                 <a class="pull-right" href="#">
-                                    <img class="media-object" src="/static/images/blog/Customer.jpg" alt="">
+                                    <img class="media-object" src="/static/images/blog/Customer.jpg" alt="مشتری">
                                 </a>
                                 <div class="media-body">
                                     <ul class="sinlge-post-meta">
@@ -112,7 +112,7 @@
                             </li>
                             <li class="media">
                                 <a class="pull-right" href="#">
-                                    <img class="media-object" src="/static/images/blog/Customer.jpg" alt="">
+                                    <img class="media-object" src="/static/images/blog/Customer.jpg" alt="مشتری">
                                 </a>
                                 <div class="media-body">
                                     <ul class="sinlge-post-meta">

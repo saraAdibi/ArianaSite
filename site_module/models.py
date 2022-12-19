@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from jalali_date import date2jalali
 
 
@@ -23,6 +24,9 @@ class SiteSetting(models.Model):
     def __str__(self):
         return self.site_name
 
+    def get_absolute_url(self):
+        return reverse('eshop_project:homemodule', args=[self.id,])
+
 
 class FooterLinkBox(models.Model):
     title = models.CharField(max_length=200, verbose_name='عنوان')
@@ -33,6 +37,9 @@ class FooterLinkBox(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('eshop_project:homemodule', args=[self.id,])
 
 
 class FooterLink(models.Model):
@@ -170,6 +177,25 @@ class MDriver(models.Model):
     class Meta:
         verbose_name = 'MDriver'
         verbose_name_plural = 'MDriver'
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse('home_module:about_page', args=[self.id,])
+
+class About_us(models.Model):
+    title = models.CharField(max_length=300, verbose_name='عنوان')
+    address = models.CharField(max_length=200, verbose_name='آدرس')
+    phone = models.CharField(max_length=200, null=True, blank=True, verbose_name='تلفن')
+    fax = models.CharField(max_length=200, null=True, blank=True, verbose_name='فکس')
+    email = models.CharField(max_length=200, null=True, blank=True, verbose_name='ایمیل')
+    is_active = models.BooleanField(default=True, verbose_name='فعال / غیرفعال')
+    is_main_setting = models.BooleanField(verbose_name='تنظیمات اصلی')
+
+    class Meta:
+        verbose_name = 'درباره ما'
+        verbose_name_plural = 'درباره ما'
 
     def __str__(self):
         return self.title

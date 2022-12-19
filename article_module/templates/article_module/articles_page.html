@@ -2,13 +2,16 @@
 {% load poll_extras %}
 {% load thumbnail %}
 {% load render_partial %}
+<meta name="description" property="og:description" content="انتخاب و خرید ربات های صنعتی کار کرده (kuka)">
+<meta name="keywords" content="kuka, robot, ربات, ربات صنعتی, ربات کوکا, ربات کارکرده, صنعت , indistry, automation">
+
 
 {% block title %}
-    لیست مقالات
+    لیست مقالات - شرکت اتوماسیون صنعتی آریانا
 {% endblock %}
 
 {% block content %}
-     <!-- Breadcrumb -->
+    <!-- Breadcrumb -->
     <div class="breadcrumbs overlay" style="background-image:url('/static/img/team/im.jpg')">
         <div class="container">
             <div class="row">
@@ -43,7 +46,7 @@
                             {#                                <li><i class="fa fa-clock-o"></i>{{ article.get_jalali_create_time }}</li>#}
                             {#                                <li><i class="fa fa-calendar"></i>{{ article.create_date | show_jalali_date }}#}
                             {#                            </ul>#}
-                            <img src="{{ article.image.url }}" alt="#">
+                            <img src="{{ article.image.url }}" alt="used robots article">
 
                         </div>
                         <!-- Service Content -->
@@ -84,78 +87,73 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-4 col-12">
-                        <!-- Service Sidebar -->
-                        <div class="service-sidebar">
-                            <!-- Single Sidebar -->
-
-
-                            <div class="service-single-sidebar widget">
-                                <h2 class="widget-title">مقالات</h2>
-                                <div class="menu-service-menu-container">
-                                    <!-- Service Menu -->
-                                    <ul id="menu-service-menu" class="menu">
-                                        <li class="active"><a href="/articles/">انتخاب و خرید ربات های کار کرده
-                                        </a></li>
-                                        {#                                        <li><a href="service-develop.html">توسعه وب</a></li>#}
-                                        {#                                        <li><a href="service-market.html">تحقیقات بازار</a></li>#}
-                                        {#                                        <li><a href="service-advertise.html">نمونه تبلیغات</a></li>#}
-                                        {#                                        <li><a href="service-design.html">طراحی روند</a></li>#}
-                                        {#                                        <li><a href="service-marketing.html">بازاریابی دیجیتال</a></li>#}
-                                    </ul>
-                                </div>
-                            </div>
-                            {#                        {% endfor %}#}
-                            <!-- Single Sidebar -->
-                            <div class="service-single-sidebar widget">
-                                {#                                <h2 class="widget-title">فرم را پر کنید</h2>#}
-                                {#                                <div class="contact-form-area service">#}
-                                {#                                    <!-- Service Form -->#}
-                                {#                                    <form class="form">#}
-                                {#                                        <div class="row">#}
-                                {#                                            <div class="col-12">#}
-                                {#                                                <div class="form-group">#}
-                                {#                                                    <div class="icon"><i class="fa fa-user"></i></div>#}
-                                {#                                                    <input type="text" name="user-name"#}
-                                {#                                                           placeholder="نام و نام خانوادگی">#}
-                                {#                                                </div>#}
-                                {#                                            </div>#}
-                                {#                                            <div class="col-12">#}
-                                {#                                                <div class="form-group">#}
-                                {#                                                    <div class="icon"><i class="fa fa-envelope"></i></div>#}
-                                {#                                                    <input type="email" name="email" placeholder="ایمیل شما">#}
-                                {#                                                </div>#}
-                                {#                                            </div>#}
-                                {#                                            <div class="col-12">#}
-                                {#                                                <div class="form-group">#}
-                                {#                                                    <div class="icon"><i class="fa fa-tag"></i></div>#}
-                                {#                                                    <input type="text" name="subject" placeholder="موضوع را تایپ کنید">#}
-                                {#                                                </div>#}
-                                {#                                            </div>#}
-                                {#                                            <div class="col-12">#}
-                                {#                                                <div class="form-group">#}
-                                {#                                                    <div class="icon"><i class="fa fa-pencil"></i></div>#}
-                                {#                                                    <textarea type="textarea" rows="5"></textarea>#}
-                                {#                                                </div>#}
-                                {#                                            </div>#}
-                                {#                                            <div class="col-12">#}
-                                {#                                                <div class="form-group button">#}
-                                {#                                                    <button type="submit" class="bizwheel-btn theme-2">ارسال</button>#}
-                                {#                                                </div>#}
-                                {#                                            </div>#}
-                                {#                                        </div>#}
-                                {#                                    </form>#}
-                                {#                                    <!--/ End Service Form -->#}
-                                {#                                </div>#}
-
-                                <img src="/static/img/articles/ariana22.png">
+                {% endfor %}
+                <div class="col-lg-4 col-12">
+                    <!-- Service Sidebar -->
+                    <div class="service-sidebar">
+                        <!-- Single Sidebar -->
+                        <div class="service-single-sidebar widget">
+                            <h2 class="widget-title">مقالات</h2>
+                            <div class="menu-service-menu-container">
+                                <!-- Service Menu -->
+                                <ul id="menu-service-menu" class="menu">
+                                    <li class="active">
+                                        <a href="/articles/">ربات های کارکرده</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <!--/ End Service Sidebar -->
-                    </div>
-                    </div>
+                        {#                        {% endfor %}#}
+                        <!-- Single Sidebar -->
+                        <div class="service-single-sidebar widget">
+                            {#                                <h2 class="widget-title">فرم را پر کنید</h2>#}
+                            {#                                <div class="contact-form-area service">#}
+                            {#                                    <!-- Service Form -->#}
+                            {#                                    <form class="form">#}
+                            {#                                        <div class="row">#}
+                            {#                                            <div class="col-12">#}
+                            {#                                                <div class="form-group">#}
+                            {#                                                    <div class="icon"><i class="fa fa-user"></i></div>#}
+                            {#                                                    <input type="text" name="user-name"#}
+                            {#                                                           placeholder="نام و نام خانوادگی">#}
+                            {#                                                </div>#}
+                            {#                                            </div>#}
+                            {#                                            <div class="col-12">#}
+                            {#                                                <div class="form-group">#}
+                            {#                                                    <div class="icon"><i class="fa fa-envelope"></i></div>#}
+                            {#                                                    <input type="email" name="email" placeholder="ایمیل شما">#}
+                            {#                                                </div>#}
+                            {#                                            </div>#}
+                            {#                                            <div class="col-12">#}
+                            {#                                                <div class="form-group">#}
+                            {#                                                    <div class="icon"><i class="fa fa-tag"></i></div>#}
+                            {#                                                    <input type="text" name="subject" placeholder="موضوع را تایپ کنید">#}
+                            {#                                                </div>#}
+                            {#                                            </div>#}
+                            {#                                            <div class="col-12">#}
+                            {#                                                <div class="form-group">#}
+                            {#                                                    <div class="icon"><i class="fa fa-pencil"></i></div>#}
+                            {#                                                    <textarea type="textarea" rows="5"></textarea>#}
+                            {#                                                </div>#}
+                            {#                                            </div>#}
+                            {#                                            <div class="col-12">#}
+                            {#                                                <div class="form-group button">#}
+                            {#                                                    <button type="submit" class="bizwheel-btn theme-2">ارسال</button>#}
+                            {#                                                </div>#}
+                            {#                                            </div>#}
+                            {#                                        </div>#}
+                            {#                                    </form>#}
+                            {#                                    <!--/ End Service Form -->#}
+                            {#                                </div>#}
 
-                {% endfor %}
+                            <img src="/static/img/articles/ariana22.png" alt="">
+                        </div>
+                    </div>
+                    <!--/ End Service Sidebar -->
+                </div>
+            </div>
+
+
         </div>
     </section>
     <!--/ End Services -->

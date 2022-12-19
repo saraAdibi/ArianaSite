@@ -1,5 +1,7 @@
 {% extends 'shared/_layout.html' %}
 {% load thumbnail %}
+<meta name="description" property="og:description" content="محصولات شرکت اتوماسیون صنعتی آریانا - ضدعفونی کننده، plc">
+<meta name="keywords" content="siemens ,زیمنس ،ضدعفونی کنند اتوماتیک , ربات صنعتی، آموزش ربات، plc">
 
 {% block title %}لیست محصولات{% endblock %}
 
@@ -57,7 +59,7 @@
 {#                            <div class="icon-head">#}
 {#                                <i class="fa fa-bicycle"></i>#}
 {#                            </div>#}
-                            <img src="{{ product.image.url }}" alt="">
+                            <img src="{{ product.image.url }}" alt="تصویر محصول">
                         </div>
                         <h2 class="price"><span>{{ product.price }} <b class="renew"> تومان </b> </span></h2>
                         <ul class="price-list">

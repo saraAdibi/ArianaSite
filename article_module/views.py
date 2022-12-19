@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.views.generic import DetailView
 from django.views.generic.list import ListView
 from article_module.models import Article, ArticleCategory
-
+from django.template.loader import render_to_string
 
 
 class ArticlesListView(ListView):

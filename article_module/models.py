@@ -1,8 +1,9 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 from jalali_date import date2jalali
-
+from django.utils.text import slugify
 from account_module.models import User
 
 
@@ -41,6 +42,14 @@ class Article(models.Model):
     def get_jalali_create_time(self):
         return self.create_date.strftime('%H:%M')
 
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
+
     class Meta:
         verbose_name = 'مقاله'
         verbose_name_plural = 'مقالات'
+
+    def get_absolute_url(self):
+        return reverse('articles_list', args=[self.id,])
+
