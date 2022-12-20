@@ -138,26 +138,22 @@
         </div>
         <div class="single-content">
             <h4>درباره ما</h4>
-            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
-                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
+            <p>{{ site_setting.about_us_text }}</p>
             <ul class="address-widget-list">
-                <li class="footer-mobile-number"><i class="fa fa-phone"></i>{{ site_setting.email }}</li>
-                <li class="footer-mobile-number"><i class="fa fa-envelope"></i>{{ slider.email }}</li>
-                <li class="footer-mobile-number"><i class="fa fa-map-marker"></i>ساختمان خانه اوتارا</li>
+                <li class="footer-mobile-number"><i class="fa fa-phone"></i>{{ site_setting.phone }}</li>
+                <li class="footer-mobile-number"><i class="fa fa-envelope"></i>{{ site_setting.email }}</li>
+                <li class="footer-mobile-number"><i class="fa fa-map-marker"></i>{{ site_setting.address }}</li>
             </ul>
             <div class="side-button">
-                <a href="portfolio.html" class="bizwheel-btn theme-2 effect">نمایش نمونه کارها</a>
+                <a href="/projects/" class="bizwheel-btn theme-2 effect">پروژه ها</a>
             </div>
         </div>
         <div class="single-content">
             <h4>پیوندهای مهم</h4>
             <ul class="links">
-                <li><a href="#">درباره ما</a></li>
-                <li><a href="#">خدمات ما</a></li>
-                <li><a href="#">نمونه کارها</a></li>
-                <li><a href="#">برنامه قیمت گذاری</a></li>
-                <li><a href="#">وبلاگ و اخبار</a></li>
-                <li><a href="#">تماس با ما</a></li>
+                <li><a href="/contact-us/">تماس با ما</a></li>
+                <li><a href="/projects/">نمونه کارها</a></li>
+                <li><a href="/products/">فروشگاه آریانا</a></li>
             </ul>
         </div>
     </div>

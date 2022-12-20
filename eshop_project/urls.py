@@ -24,6 +24,7 @@ from django.contrib.sitemaps.views import sitemap
 from django.views.static import serve
 
 urlpatterns = [
+    # debug = false
     url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     url(r'^STATIC/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
 
